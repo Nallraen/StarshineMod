@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "starshine:ruby_block",
+    "starshine:ruby_ore",
+    "starshine:magentite_ore"
+  ]
+}

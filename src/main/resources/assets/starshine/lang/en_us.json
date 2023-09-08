@@ -8,6 +8,9 @@
   "item.starshine.saphir": "Saphir",
   "item.starshine.topaze": "Topaze",
 
+  // Custom items
+  "item.starshine.eight_ball": "Boule magique",
+
   // Hoes
   "item.starshine.amethyst_hoe": "Amethyst Hoe",
 
@@ -32,8 +35,12 @@
   "block.starshine.ruby_block": "Ruby Block",
   "block.starshine.magentite_ore": "Magentite Ore",
 
+  // Custom Blocks
+  "block.starshine.custom_block": "Default Custom Block",
+
   // Creative TAB
   "itemGroup.base_tab": "Starshine",
-  "itemGroup.tools_tab": "Starshine Tools"
+  "itemGroup.tools_tab": "Starshine Tools",
+  "itemGroup.blocks_tab": "Starshine Blocks"
 
 }

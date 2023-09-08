@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "starshine:block/custom_block"}
+  }
+}
