@@ -41,6 +41,10 @@
   // Creative TAB
   "itemGroup.base_tab": "Starshine",
   "itemGroup.tools_tab": "Starshine Tools",
-  "itemGroup.blocks_tab": "Starshine Blocks"
+  "itemGroup.blocks_tab": "Starshine Blocks",
+
+  // Entities
+  "entity.minecraft.villager.starshine.glow_master": "Glow Master"
+
 
 }

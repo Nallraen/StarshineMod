@@ -9,6 +9,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nallraen.starshine.registers.block.RegisterBlocks;
+import net.nallraen.starshine.registers.entity.villager.RegisterVillager;
 import net.nallraen.starshine.registers.item.RegisterItems;
 import org.slf4j.Logger;
 
@@ -23,13 +24,17 @@ public class StarshineMod
         RegisterItems.register(modEventBus);
         RegisterBlocks.register(modEventBus);
 
+        RegisterVillager.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            RegisterVillager.registerPOIs();
+        });
     }
 
 
