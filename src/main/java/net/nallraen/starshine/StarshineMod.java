@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nallraen.starshine.registers.Items;
 import org.slf4j.Logger;
 
 @Mod(StarshineMod.MOD_ID)
@@ -17,6 +18,9 @@ public class StarshineMod
     private static final Logger LOGGER = LogUtils.getLogger();
     public StarshineMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        Items.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 

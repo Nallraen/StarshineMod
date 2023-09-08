@@ -1,0 +1,39 @@
+{
+  // Items
+  "item.starshine.amethyst": "Amethyst",
+  "item.starshine.epidote": "Epidote",
+  "item.starshine.magentite": "Magentite",
+  "item.starshine.opale": "Opale",
+  "item.starshine.ruby": "Ruby",
+  "item.starshine.saphir": "Saphir",
+  "item.starshine.topaze": "Topaze",
+
+  // Hoes
+  "item.starshine.amethyst_hoe": "Amethyst Hoe",
+
+  // Shovels
+  "item.starshine.amethyst_shovel": "Amethyst Shovel",
+
+  // Axes
+  "item.starshine.amethyst_axe": "Amethyst Axe",
+
+  // Pickaxes
+  "item.starshine.amethyst_pickaxe": "Amethyst Pickaxe",
+
+  // Swords
+  "item.starshine.amethyst_sword": "Amethyst Sword",
+
+  // Bows
+  "item.starshine.randombow": "A fucking random bow...",
+
+
+  // Blocks
+  "block.starshine.ruby_ore": "Ruby Ore",
+  "block.starshine.ruby_block": "Ruby Block",
+  "block.starshine.magentite_ore": "Magentite Ore",
+
+  // Creative TAB
+  "itemGroup.base_tab": "Starshine",
+  "itemGroup.tools_tab": "Starshine Tools"
+
+}

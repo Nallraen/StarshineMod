@@ -1,0 +1,6 @@
+{
+  "parent": "starshine:item/randombow",
+  "textures": {
+    "layer0": "starshine:item/randombow_pulling_0"
+  }
+}

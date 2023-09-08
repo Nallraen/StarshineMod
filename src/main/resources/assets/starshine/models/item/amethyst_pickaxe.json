@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "starshine:item/amethyst_pickaxe"
+  }
+}
