@@ -44,7 +44,15 @@
   "itemGroup.blocks_tab": "Starshine Blocks",
 
   // Entities
-  "entity.minecraft.villager.starshine.glow_master": "Glow Master"
+  "entity.minecraft.villager.starshine.glow_master": "Glow Master",
+
+  // KeyBinding
+  "key.category.starshine.default": "Starshine",
+  "key.starshine.drink_water": "Drink \"water\"",
+
+  // Messages
+  "message.starshine.no_water": "There is no water source close to you !",
+  "message.starshine.drink_water": "Congrats! You're completely drunk..."
 
 
 }
