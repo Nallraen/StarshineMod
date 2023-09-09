@@ -11,6 +11,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.network.NetworkEvent;
+import net.nallraen.starshine.networking.NetMessages;
 import net.nallraen.starshine.player.capabilities.thrist.PlayerThirstProvider;
 
 import java.util.function.Supplier;
@@ -45,14 +46,18 @@ public class DrinkWaterC2SPacket {
                         0.5f, level.random.nextFloat() * 0.1f + 0.9f);
                 player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
                     thirst.addThrist(thirst.getMaxThirst());
-                    player.sendSystemMessage(Component.translatable("Current thirst level: "+ thirst.getThirst()).withStyle(ChatFormatting.DARK_AQUA));
+                    // player.sendSystemMessage(Component.translatable("Current thirst level: "+ thirst.getThirst())
+                    //         .withStyle(ChatFormatting.DARK_AQUA));
+                    NetMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
+
                 });
 
 
             } else {
                 player.sendSystemMessage(Component.translatable(MESSAGE_NO_WATER).withStyle(ChatFormatting.DARK_RED));
                 player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
-                    player.sendSystemMessage(Component.translatable("Current thirst level: "+ thirst.getThirst()).withStyle(ChatFormatting.RED));
+                    // player.sendSystemMessage(Component.translatable("Current thirst level: "+ thirst.getThirst()).withStyle(ChatFormatting.RED));
+                    NetMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
                 });
 
             }

@@ -9,6 +9,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import net.nallraen.starshine.StarshineMod;
 import net.nallraen.starshine.networking.packet.DefaultC2SPacket;
 import net.nallraen.starshine.networking.packet.DrinkWaterC2SPacket;
+import net.nallraen.starshine.networking.packet.ThirstDataSyncS2CPacket;
 
 public class NetMessages {
 
@@ -30,6 +31,8 @@ public class NetMessages {
         INSTANCE = net;
 
         // Create packet there
+
+        // Play To Server
         net.messageBuilder(DefaultC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .decoder(DefaultC2SPacket::new)
                 .encoder(DefaultC2SPacket::toBytes)
@@ -39,6 +42,15 @@ public class NetMessages {
                 .decoder(DrinkWaterC2SPacket::new)
                 .encoder(DrinkWaterC2SPacket::toBytes)
                 .consumerMainThread(DrinkWaterC2SPacket::handle)
+                .add();
+
+
+
+        // Play To Client
+        net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ThirstDataSyncS2CPacket::new)
+                .encoder(ThirstDataSyncS2CPacket::toBytes)
+                .consumerMainThread(ThirstDataSyncS2CPacket::handle)
                 .add();
 
     }

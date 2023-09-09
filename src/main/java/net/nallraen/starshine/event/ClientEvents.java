@@ -5,10 +5,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.vehicle.Minecart;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.nallraen.starshine.StarshineMod;
+import net.nallraen.starshine.client.ThirstHudOverlay;
 import net.nallraen.starshine.networking.NetMessages;
 import net.nallraen.starshine.networking.packet.DefaultC2SPacket;
 import net.nallraen.starshine.networking.packet.DrinkWaterC2SPacket;
@@ -32,5 +34,11 @@ public class ClientEvents {
         public static void onKeyRegister(RegisterKeyMappingsEvent e) {
             e.register(KeyBinding.DRINKING_KEY);
         }
+        @SubscribeEvent
+        public static void registerGuiOverlays(RegisterGuiOverlaysEvent e) {
+            e.registerAboveAll("thirst", ThirstHudOverlay.HUD_THIRST);
+        }
+
+
     }
 }
